@@ -70,11 +70,17 @@ public class ProdutosDAO {
         return listagem;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
         
 =======
     
     public void venderProduto(int id) {
         String sql = "UPDATE produtos SET status = 'Vendido' WHERE id = ? AND status = 'À venda'";
+=======
+    
+    public void venderProduto(int id) {
+        String sql = "UPDATE produtos SET status = 'Vendido' WHERE id = ?";
+>>>>>>> 28796a7 (Implementação do botão de venda funcional na tela listagemVIEW)
 
         try {
             conn = new conectaDAO().connectDB();
@@ -97,6 +103,9 @@ public class ProdutosDAO {
         }
     }
     
+<<<<<<< HEAD
 >>>>>>> 9ca2f27 (Criação da tela vendasVIEW e da tabela listaVendas)
+=======
+>>>>>>> 28796a7 (Implementação do botão de venda funcional na tela listagemVIEW)
 }
 
