@@ -69,6 +69,34 @@ public class ProdutosDAO {
         
         return listagem;
     }
+<<<<<<< HEAD
         
+=======
+    
+    public void venderProduto(int id) {
+        String sql = "UPDATE produtos SET status = 'Vendido' WHERE id = ? AND status = 'À venda'";
+
+        try {
+            conn = new conectaDAO().connectDB();
+            prep = conn.prepareStatement(sql);
+            prep.setInt(1, id);
+
+            int rowsAffected = prep.executeUpdate();
+
+            if (rowsAffected > 0) {
+                JOptionPane.showMessageDialog(null, "Produto vendido com sucesso.");
+            } else {
+                JOptionPane.showMessageDialog(null, "Produto com ID " + id + " não encontrado.");
+            }
+
+            prep.close();
+            conn.close();
+
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, "Erro ao vender produto: " + e.getMessage());
+        }
+    }
+    
+>>>>>>> 9ca2f27 (Criação da tela vendasVIEW e da tabela listaVendas)
 }
 
